@@ -3,14 +3,18 @@
 {% block content %}
 {% if "инженер" in prof.split() or "строитель" in prof.split() %}
     <div>
-        <h4>Это есть инженер или строитель</h4>
-        <img src="{{href_for_engineer}}">
+        <center>
+        <h2>Это есть инженер или строитель</h2>
+        <img src="{{href_for_engineer}}" width="373" height="206">
+        </center>
     </div>
 
 {% else %}
     <div>
-        <h4>Это есть не инженер и не строитель</h4>
-        <img src="{{href_for_nonengineer}}">
+        <center>
+        <h2>Это есть не инженер и не строитель</h2>
+        <img src="{{href_for_nonengineer}}" width="373" height="206">
+        </center>
     </div>
 {% endif %}
 {% endblock %}
