@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block content %}
+    {% if list_type == "ul" %}
+        <ul>
+            {% for elem in list %}
+                <li>{{ elem }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <ol>
+             {% for elem in list %}
+                <li>{{ elem }}</li>
+            {% endfor %}
+        </ol>
+    {%endif%}
+{% endblock %}

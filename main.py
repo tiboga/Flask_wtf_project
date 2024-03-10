@@ -19,5 +19,11 @@ def training(prof):
                            href_for_nonengineer=url_for('static', filename='img/nonengineer.png'))
 
 
+@app.route('/list_prof/<list>')
+def list_prof(list):
+    list_data = ['pipi', 'papa', 'popo', 'pupu']
+    return render_template('list.html', list_type=list, list=list_data)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
