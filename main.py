@@ -21,7 +21,7 @@ def training(prof):
 
 @app.route('/list_prof/<list>')
 def list_prof(list):
-    list_data = ['Ультрамегахороши инженер', 'Крутой капитан', 'Живительный врач', 'Никому не нужный басист']
+    list_data = ['Ультрамегахороши инженер', 'Крутой капитан', 'Живительный врач', 'Никому ненужный басист']
     return render_template('list.html', list_type=list, list=list_data)
 
 @app.route('/distribution')
