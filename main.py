@@ -24,10 +24,24 @@ def list_prof(list):
     list_data = ['Ультрамегахороши инженер', 'Крутой капитан', 'Живительный врач', 'Никому ненужный басист']
     return render_template('list.html', list_type=list, list=list_data)
 
+
 @app.route('/distribution')
 def list_cabins():
     list_of_cabins = ['first', 'second', 'third', 'fourth', 'fifth']
     return render_template('list_cabins.html', list=list_of_cabins)
+
+
+@app.route('/answer')
+def answer():
+    data = dict()
+    data['title'] = 'title'
+    data['surname'] = 'surname'
+    data['name'] = 'name'
+    data['education'] = 'education'
+    data['profession'] = 'profession'
+    data['sex'] = 'sex'
+    data['motivation'] = 'motivation'
+    data['ready'] = 'ready'
 
 if __name__ == '__main__':
     app.run(port=8088, host='127.0.0.1')
