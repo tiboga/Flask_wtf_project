@@ -24,6 +24,10 @@ def list_prof(list):
     list_data = ['pipi', 'papa', 'popo', 'pupu']
     return render_template('list.html', list_type=list, list=list_data)
 
+@app.route('/distribution')
+def list_cabins():
+    list_of_cabins = ['first', 'second', 'third', 'fourth', 'fifth']
+    return render_template('list_cabins.html', list=list_of_cabins)
 
 if __name__ == '__main__':
-    app.run(port=8080, host='127.0.0.1')
+    app.run(port=8088, host='127.0.0.1')

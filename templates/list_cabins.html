@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block content %}
+<center>
+<h2>Размещение по каютам</h2>
+{% for elem in list %}
+{% if loop.index == 1 %}
+<p>{{elem}} - Каюта № {{loop.index}} - капитан корабля</p>
+{%else%}
+<p>{{elem}} - Каюта № {{loop.index}}</p>
+{%endif%}
+{%endfor%}
+</center>
+{% endblock %}
