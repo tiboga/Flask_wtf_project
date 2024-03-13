@@ -43,5 +43,8 @@ def answer():
     data['motivation'] = 'motivation'
     data['ready'] = 'ready'
 
+    return render_template('answer.html', data=data, style=url_for('static', filename='css/style_for_answer'))
+
+
 if __name__ == '__main__':
-    app.run(port=8088, host='127.0.0.1')
+    app.run(port=8080, host='127.0.0.1')

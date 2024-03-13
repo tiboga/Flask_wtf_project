@@ -1,7 +1,15 @@
 {% extends "index.html" %}
 
 {% block content %}
-<center>
-{%
-</center>
+<link rel="stylesheet" href="/static/css/style_for_answer.css">
+<div class="answer">
+
+    <h4>Фамилия: {{data.surname}}</h4>
+    <h4>Имя: {{data.name}}</h4>
+    <h4>Образование: {{data.education}}</h4>
+    <h4>Профессия: {{data.profession}}</h4>
+    <h4>Пол: {{data.sex}}</h4>
+    <h4>Мотивация: {{data.motivation}}</h4>
+    <h4>Готовы остаться на Марсе?: {{data.ready}}</h4>
+</div>
 {% endblock %}
