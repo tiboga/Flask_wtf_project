@@ -1,7 +1,7 @@
-from flask import Flask, url_for, request, render_template
-
+from flask import Flask, url_for, render_template, redirect
+from loginform import LoginForm
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'SECRET_KEY'
 
 @app.route('/')
 def home_page():
@@ -46,5 +46,13 @@ def answer():
     return render_template('answer.html', data=data, style=url_for('static', filename='css/style_for_answer'))
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect('/success')
+    return render_template('login_form.html', title='Авторизация', form=form)
+
+
 if __name__ == '__main__':
-    app.run(port=8080, host='127.0.0.1')
+    app.run(port=8081, host='127.0.0.1')
